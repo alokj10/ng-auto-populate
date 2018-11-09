@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "bullet-list": [
+        "dist/bullet-list"
+      ],
+      "bullet-list/*": [
+        "dist/bullet-list/*"
+      ]
+    }
   }
 }
