@@ -1,8 +1,12 @@
 {
   "name": "bullet-list",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
+  },
+  "homepage": "https://github.com/alokj10/ng-auto-populate",
+  "bugs": {
+    "url": "https://github.com/alokj10/ng-auto-populate/issues"
   }
 }

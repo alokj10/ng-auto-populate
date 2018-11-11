@@ -10,11 +10,13 @@ HTML
     </div>
 ```
 CSS
+<pre>
 .example {
     margin-top: 2%;
     padding-left: 30%;
     padding-right: 30%;
   }
+</pre>
 
 TypeScript
 <pre>
