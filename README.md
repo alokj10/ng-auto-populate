@@ -1,6 +1,15 @@
 
 ## An Angular library to create filter list.
 
+# Demo
+![Filter](https://github.com/alokj10/ng-auto-populate/blob/master/images/ss_4.PNG)
+
+![ss1](https://github.com/alokj10/ng-auto-populate/blob/master/images/ss_1.PNG)
+
+![ss2](https://github.com/alokj10/ng-auto-populate/blob/master/images/ss_2.PNG)
+
+![ss3](https://github.com/alokj10/ng-auto-populate/blob/master/images/ss_3.PNG)
+
 # Sample code
 
 HTML
