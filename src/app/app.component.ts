@@ -6,19 +6,47 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'auto-populate';
   data: any[] = [
-    {name: 'Mary', title: 'Stud Mary'},
-    {name: 'Shelley', title: 'Stud Shelley'},
-    {name: 'Igor', title: 'Stud Igor'},
-    {name: 'Name 1', title: 'Stud Name 1'},
-    {name: 'Name 2', title: 'Stud Name 2'},
-    {name: 'Name 3', title: 'Stud Name 3'},
-    {name: 'Name 4', title: 'Stud Name 4'},
-    {name: 'Name 5', title: 'Stud Name 5'},
-    {name: 'Name 6', title: 'Stud Name 6'},
-    {name: 'Name 7', title: 'Stud Name 7'},
-    {name: 'Name 8', title: 'Stud Name 8'},
+    {name: 'Mobile', suboptions:[
+      {name: 'Samsung'},
+      {name: 'Oppo'},
+      {name: 'Vivo'},
+      {name: 'Nokia'},
+      {name: 'Le1s'},
+      {name: 'Xiomi'},
+      {name: 'Micromax'},
+      {name: 'Lenovo'}
+    ]},
+    {name: 'Television', suboptions:[
+      {name: 'Sony'},
+      {name: 'Philips'},
+      {name: 'Micromax'},
+      {name: 'Onida'},
+      {name: 'Videocon'},
+      {name: 'LG'},
+      {name: 'Thomson'},
+      {name: 'MarQ'}
+    ]},
+    {name: 'Laptop', suboptions:[
+      {name: 'Sony Vaio'},
+      {name: 'Dell Latitude'},
+      {name: 'HP 14q'},
+      {name: 'Acer'},
+      {name: 'Lenovo'},
+      {name: 'Asus'},
+      {name: 'Dell Inspiron'},
+      {name: 'HP 15q'}
+    ]},
+    {name: 'Washing Machine', suboptions:[
+      {name: 'IFB'},
+      {name: 'Lloyd'},
+      {name: 'Mitashi'},
+      {name: 'BPL'},
+      {name: 'Onida'},
+      {name: 'Panasonic'},
+      {name: 'Sharp'},
+      {name: 'Siemens'}
+    ]}
   ];
   
 }

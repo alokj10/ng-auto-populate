@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
     <mat-form-field class="example-full-width">
     
         <input type="text" placeholder="Assignee" aria-label="Assignee" matInput [formControl]="myControl" 
@@ -6,7 +6,34 @@
         <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn.bind(this)">
           <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
             {{option.name}}
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn.bind(this)">
+              <mat-option *ngFor="let suboption of option.suboptions | async" [value]="suboption">
+                {{suboption.name}}
+              </mat-option>
+            </mat-autocomplete>
           </mat-option>
         </mat-autocomplete>
     </mat-form-field>
+</mat-card> -->
+
+<mat-card>
+  <div *ngIf="filterList && filterList.length > 0" class="filter-list">
+    <span *ngFor="let filterItem of filterList" class="filter-item">
+      {{filterItem.name}}: {{filterItem.value}} <span class="remove-btn" (click)="removeSelection(filterItem)">X</span>
+    </span>
+    <button mat-button (click)="clearSelection()">Clear All</button>
+  </div>
+  <mat-form-field>
+    <input type="text" placeholder="Filter Text" matInput [formControl]="myControl" />
+  </mat-form-field>
+  <mat-list>
+    <ng-container *ngFor="let item of filteredOptions | async">
+        <mat-list-item class="list-item" (click)="item.isOpen=!item.isOpen">{{item.name}}</mat-list-item>
+        <mat-list *ngIf="item.isOpen" style="margin-left:30px;">
+            <div *ngFor="let subItem of item.suboptions">
+                <mat-list-item class="list-item" (click)="handleSelection(item, subItem)">{{ subItem.name }}</mat-list-item>
+            </div>
+        </mat-list>
+    </ng-container>
+  </mat-list>
 </mat-card>
